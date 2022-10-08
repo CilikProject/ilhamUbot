@@ -109,8 +109,8 @@ async def psu(event):
     help_string += "**Iɴғᴏʀᴍᴀsɪ Mᴇsɪɴ**\n"
     help_string += f"**Pʏᴛʜᴏɴ :** `{sys.version}`\n"
     help_string += f"**Tᴇʟᴇᴛʜᴏɴ :**`{__version__}`\n"
-    help_string += f"**Pʏ-Aʏɪɪɴ :** `{py_ver}`\n"
-    help_string += f"**Aʏɪɪɴ-Vᴇʀsɪᴏɴ :** `{ayiin_version} [{HOSTED_ON}]`"
+    help_string += f"**Pʏ-Lɪʙɪ :** `{py_ver}`\n"
+    help_string += f"**Lɪʙɪ-Vᴇʀsɪᴏɴ :** `{ayiin_version} [{HOSTED_ON}]`"
     await edit_or_reply(event, help_string)
 
 
@@ -179,15 +179,15 @@ async def bot_ver(event):
         )
 
 
-@ayiin_cmd(pattern="(?:alive|yinson)\\s?(.)?")
+@ayiin_cmd(pattern="(?:alive|libi)\\s?(.)?")
 async def amireallyalive(alive):
     adB = AyiinDB()
     user = await alive.client.get_me()
     uptime = await get_readable_time((time.time() - StartTime))
-    await alive.edit("😈")
+    await alive.edit("⚡️")
     await asyncio.sleep(3)
     output = (
-        f"**Tʜᴇ [Aʏɪɪɴ-Usᴇʀʙᴏᴛ](https://github.com/AyiinXd/Ayiin-Userbot)**\n\n"
+        f"**Tʜᴇ [Lɪʙɪ-Usᴇʀʙᴏᴛ](https://github.com/)**\n\n"
         f"**{alive_text}**\n\n"
         f"╭✠╼━━━━━━━━━━━━━━━✠╮\n"
         f"{emoji} **Bᴀsᴇ Oɴ :** ••{adB.name}••\n"
@@ -197,8 +197,8 @@ async def amireallyalive(alive):
         f"{emoji} **Pʏᴛʜᴏɴ Vᴇʀsɪᴏɴ :** `{python_version()}` \n"
         f"{emoji} **PʏTɢCᴀʟʟs Vᴇʀsɪᴏɴ :** `{pytgcallss}` \n"
         f"{emoji} **Tᴇʟᴇᴛʜᴏɴ Vᴇʀsɪᴏɴ :** `{version.__version__}` \n"
-        f"{emoji} **Pʏ-Aʏɪɪɴ Vᴇʀsɪᴏɴ :** `{py_ver}`\n"
-        f"{emoji} **Aʏɪɪɴ Vᴇʀsɪᴏɴ :** `{ayiin_version}` [{HOSTED_ON}]\n"
+        f"{emoji} **Pʏ-Lɪʙɪ Vᴇʀsɪᴏɴ :** `{py_ver}`\n"
+        f"{emoji} **Lɪʙɪ Vᴇʀsɪᴏɴ :** `{ayiin_version}` [{HOSTED_ON}]\n"
         f"{emoji} **Bᴏᴛ Uᴘᴛɪᴍᴇ :** `{uptime}`\n"
         "╰✠╼━━━━━━━━━━━━━━━✠╯\n\n"
     )
@@ -239,7 +239,7 @@ CMD_HELP.update(
 CMD_HELP.update(
     {
         "alive": f"**Plugin : **`alive`\
-        \n\n  »  **Perintah :** `{cmd}alive` atau `{cmd}yinson`\
+        \n\n  »  **Perintah :** `{cmd}alive` atau `{cmd}libi`\
         \n  »  **Kegunaan : **Untuk melihat apakah bot Anda berfungsi atau tidak.\
     "
     }
